@@ -1,0 +1,603 @@
+
+:root {
+    --nivea-blue: #0032a0; 
+    --nivea-light: #f0f4f8;
+    --text-dark: #333333;
+    --white: #ffffff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: #f0f4f8;
+    color: #333333;
+}
+.header-desktop {
+    background-color: #f0f4f8;
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    
+}
+.logo-container {
+    margin-right: 40px; 
+}
+.logo-img {
+    width: 80px;
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+}
+.logo-img:hover {
+    opacity: 0.5;
+    transform: scale(1.1); 
+}
+.nav-desktop ul {
+    display: flex;
+    gap: 30px; 
+    list-style: none;
+}
+
+.nav-desktop a {
+    text-decoration: none;
+    color: #0032a0 !important;
+    font-size: 20px !important; 
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    
+    white-space: nowrap; 
+    
+    transition: all 0.3s ease; 
+}
+
+.nav-desktop a:hover {
+    opacity: 0.6; 
+}
+
+.header-icons {
+    display: flex;
+    gap: 20px;
+    color: #0032a0; 
+    margin-left: auto;
+    flex-shrink: 0; 
+}
+.header-icons svg,
+.header-icons img {
+    width: 35px !important; 
+    height: 35px !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.header-icons svg:hover,
+.header-icons img:hover {
+    opacity: 0.5;
+    transform: scale(1.1);
+}
+.hero-section {
+    background-image: url('chica\ crema.jpeg'); 
+    background-size: cover; 
+    background-position: center right; 
+    height: 500px; 
+    
+    display: flex;
+    align-items: center; 
+    padding-left: 10%; 
+}
+ .icono-svg {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+.hero-text-box {
+    max-width: 450px;
+    text-align: left; 
+}
+.hero-text-box h1 {
+    color: #0032a0;
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.hero-text-box h2 {
+    color: #0032a0;
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+.hero-text-box p {
+    color: #0032a0;
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+.btn-hero {
+    background-color: #0032a0;
+    color: white;
+    text-decoration: none;
+    padding: 12px 35px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-block;
+    transition: transform 0.3s ease; 
+}
+.btn-hero:hover {
+    transform: scale(1.05); 
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #0032a0;
+    color: var(--white);
+}
+
+
+section {
+    padding: 40px 20px;
+}
+
+h2 {
+    color: #0032a0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.productos-grid, .categorias-grid, .footer-grid {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    align-items: center;
+}
+
+
+.mercadolibre {
+    padding: 0;
+    margin-bottom: 60px;
+}
+.ml-banner-link {
+    display: block; 
+    text-decoration: none; 
+}
+.ml-content {
+    position: relative; 
+    overflow: hidden;
+    width: 100%;
+}
+.ml-content img {
+    width: 100%;
+    display: block;
+    
+    transition: transform 0.4s ease; 
+}
+.btn-overlay {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    
+    border: 2px solid white; 
+    color: white; 
+    padding: 10px 40px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 30px; 
+    
+    opacity: 0; 
+    transition: opacity 0.4s ease; 
+}
+.ml-banner-link:hover .ml-content img {
+    transform: scale(1.05); 
+}
+.ml-banner-link:hover .btn-overlay {
+    opacity: 1; 
+}
+
+
+.destacados {
+    background-color: var(--nivea-light);
+    padding: 60px 20px;
+    text-align: center;
+}
+.destacados h2 {
+    color: #0032a0;
+    font-size: 24px;
+    margin-bottom: 60px;
+}
+.carrusel-wrapper {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.productos-track {
+    display: flex;
+    flex-direction: row; 
+    gap: 30px; 
+    overflow-x: auto;
+    padding: 20px 10px;
+    
+  
+    scrollbar-width: none; 
+}
+.productos-track::-webkit-scrollbar {
+    display: none;
+}
+.producto-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    width: 320px;
+    flex-shrink: 0; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    position: relative; 
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+}
+.producto-card:hover {
+    transform: scale(1.15); 
+}
+.card-info {
+    text-align: left;
+    width: 60%;
+}
+.estrellas {
+    color: #ffd700;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.estrella-gris {
+    color: #d1d5db; 
+}
+.categoria-prod {
+    color: #0032a0;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.card-info h3 {
+    color: #0032a0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+.card-img {
+    width: 35%;
+    text-align: right;
+}
+.card-img img {
+    max-width: 100%;
+    height: auto;
+}
+.btn-cart {
+    position: absolute;
+    top: 15px; 
+    right: 15px; 
+    width: 32px; 
+    height: 32px;
+    cursor: pointer;
+}
+.btn-cart img {
+    width: 100%;
+    height: 100%;
+}
+.flecha-carrusel {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #0032a0;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10; 
+}
+.flecha-izq {
+    left: -20px; 
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+}
+.flecha-izq:hover {
+    transform: scale(1.15); 
+}
+.flecha-der {
+    right: -20px; 
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+}
+.flecha-der:hover {
+    transform: scale(1.15); 
+}
+
+
+.categorias-desc {
+    color: var(--nivea-blue);
+    font-size: 16px;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.categorias-grid {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 40px; 
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.circulo-cat {
+    width: 120px;
+    height: 120px;
+    background-color: #8da2c9;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+.categoria-item:hover .circulo-cat {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 32, 100, 0.2);
+}
+.circulo-cat img {
+    height: 150px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 2;
+    
+    filter: drop-shadow(-6px 8px 6px rgba(0, 30, 80, 0.4)); 
+}
+.circulo-cat img.rotar-der {
+    transform: translateX(-50%) rotate(12deg);
+}
+.circulo-cat img.rotar-izq {
+    transform: translateX(-50%) rotate(-12deg);
+}
+.categoria-item p {
+    color: var(--nivea-blue);
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.categoria-item:hover p {
+    transform: scale(1.05);
+}
+
+
+.cuidado-piel {
+    
+    background-image: url('chica\ rulos.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    margin-bottom: 60px; 
+    
+
+    display: flex;
+    justify-content: center;
+}
+.cuidado-contenedor {
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.caja-flotante {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 320px; 
+}
+.tarjeta-blanca {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 40px 20px 20px 20px; 
+    position: relative; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+    width: 100%;
+}
+.logo-tarjeta {
+    position: absolute;
+    top: -35px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 70px;
+}
+.tarjeta-blanca h3 {
+    color: var(--nivea-blue);
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 25px;
+    line-height: 1.3;
+}
+.lista-cuidados {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2; 
+}
+.item-cuidado {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.item-cuidado img {
+    width: 50px; 
+}
+.item-cuidado p {
+    color: var(--nivea-blue);
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+.img-productos-grupo {
+    position: absolute;
+    bottom: -10px; 
+    right: -60px; 
+    width: 200px;
+    z-index: 1;
+}
+.btn-conoce-mas {
+    background-color: var(--nivea-blue);
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 40px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease; 
+}
+.btn-conoce-mas:hover {
+    transform: scale(1.05);
+    background-color: #002277; 
+}
+
+
+.footer-nivea {
+    background-color: var(--nivea-blue);
+    color: white;
+}
+.footer-main {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-left {
+    flex: 1; 
+    padding: 40px 60px 40px 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.7); 
+}
+.footer-right {
+    flex: 1; 
+    padding: 40px 20px 40px 60px;
+}
+
+.footer-block h4 {
+    font-size: 13px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 25px;
+}
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 30px 0;
+}
+
+.club-benefits {
+    list-style: none;
+    margin-bottom: 20px;
+}
+.club-benefits li {
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+.club-cta {
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 250px;
+}
+.newsletter-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+.newsletter-form button {
+    background-color: #3b5998; 
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.newsletter-form button:hover {
+    transform: scale(1.05);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a img {
+    width: 30px;
+}
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+
+.footer-bottom {
+    background-color: #e6ebf1; 
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--nivea-blue);
+}
+.beiersdorf-logo {
+    height: 20px;
+}
+.footer-bottom p {
+    font-size: 11px;
+    font-weight: bold;
+}
